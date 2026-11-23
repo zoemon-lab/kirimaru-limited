@@ -8,6 +8,7 @@
 <body><main><h1>キリマル 限定版</h1><p id="status" role="status">共有されたリンクから開いてください。</p><noscript>利用するにはJavaScriptを有効にしてください。</noscript></main>
 <script>
 (async () => {
+  window.addEventListener('hashchange', () => location.reload(), {once:true});
   const status = document.querySelector('#status');
   const token = location.hash.slice(1);
   if (!token) return;
